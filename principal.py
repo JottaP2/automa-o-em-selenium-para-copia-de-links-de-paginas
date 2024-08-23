@@ -9,7 +9,7 @@ driver.get("https://www.cnnbrasil.com.br/")
 
 time.sleep(5)
 
-def find_links(max_links=100):
+def cap_links(max_links=100):
     captura_links = set()
     
     links = driver.find_elements(By.CSS_SELECTOR, "a")
@@ -40,4 +40,4 @@ def find_links(max_links=100):
     print(f"Links encontrados e salvos: {len(captura_links)}")
     driver.quit()
 
-find_links(max_links=100)
+cap_links(max_links=100)
